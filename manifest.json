@@ -1,31 +1,16 @@
 {
-  "name": "PuRTy",
-  "description": "Pull Request Template helper",
-  "version": "1.0",
+  "name": "Friends Random Episode",
+  "description": "Choose a random friends episode from putlocker.is",
+  "version": "0.1",
   "manifest_version": 2,
   "permissions": [
-    "tabs",
     "activeTab",
-    "storage",
-    "declarativeContent",
-    "https://*.github.com/*",
-    "https://render.github.com/*",
-    "https://raw.github.com/*",
-    "https://github.com/*"
+    "tabs",
+    "http://putlocker.is/*"
   ],
-  "background": {
-    "page": "background.html",
-    "persistent": false
-  },
-  "options_page": "options.html",
-  "content_scripts": [
-    {
-      "matches": ["https://github.com/*/compare/*"],
-      "js": ["pageActionThing.js"]
-    }
-  ],
-  "page_action": {
+  "browser_action": {
     "default_icon" : "icon.png",
-    "default_title": "Start Event Page"
+    "default_title": "Choose random episode",
+    "default_popup": "popup.html"
   }
 }
